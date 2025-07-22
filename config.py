@@ -17,15 +17,15 @@ class TradingConfig:
     price_multiple: float = 1.0
     
     # Risk Management
-    stop_loss_percentage: float = 0.92
-    profit_target_percentage: float = 1.03
-    higher_profit_target: float = 1.05
-    max_profit_target: float = 1.12
+    stop_loss_percentage: float = 0
+    profit_target_percentage: float = 1
+    higher_profit_target: float = 1
+    max_profit_target: float = 1
     
     # Trailing Stop Parameters
-    trailing_stop_percentage: float = 0.975
-    higher_trailing_stop: float = 0.965
-    max_trailing_stop: float = 0.955
+    trailing_stop_percentage: float = 0
+    higher_trailing_stop: float = 0
+    max_trailing_stop: float = 0
 
 @dataclass
 class SymbolConfig:
@@ -42,20 +42,20 @@ def load_config() -> Dict[str, Any]:
     """Load configuration from environment variables or use defaults"""
     return {
         'trading': TradingConfig(
-            api_key=os.getenv('API_KEY', 'uQBIgMGv'),
-            username=os.getenv('USERNAME', 'S692948'),
-            password=os.getenv('PASSWORD', '5472'),
-            totp_token=os.getenv('TOTP_TOKEN', 'CESGV6Z4HHXCIZHQPL3CUFK6ZU'),
+            api_key=os.getenv('API_KEY', ''),
+            username=os.getenv('USERNAME', ''),
+            password=os.getenv('PASSWORD', ''),
+            totp_token=os.getenv('TOTP_TOKEN', ''),
             margin_limit=float(os.getenv('MARGIN_LIMIT', '7500')),
             quantity_limit=int(os.getenv('QUANTITY_LIMIT', '1000')),
             price_multiple=float(os.getenv('PRICE_MULTIPLE', '1.0')),
-            stop_loss_percentage=float(os.getenv('STOP_LOSS_PERCENTAGE', '0.92')),
-            profit_target_percentage=float(os.getenv('PROFIT_TARGET_PERCENTAGE', '1.03')),
-            higher_profit_target=float(os.getenv('HIGHER_PROFIT_TARGET', '1.05')),
-            max_profit_target=float(os.getenv('MAX_PROFIT_TARGET', '1.12')),
-            trailing_stop_percentage=float(os.getenv('TRAILING_STOP_PERCENTAGE', '0.975')),
-            higher_trailing_stop=float(os.getenv('HIGHER_TRAILING_STOP', '0.965')),
-            max_trailing_stop=float(os.getenv('MAX_TRAILING_STOP', '0.955'))
+            stop_loss_percentage=float(os.getenv('STOP_LOSS_PERCENTAGE', '0.')),
+            profit_target_percentage=float(os.getenv('PROFIT_TARGET_PERCENTAGE', '1.')),
+            higher_profit_target=float(os.getenv('HIGHER_PROFIT_TARGET', '1.')),
+            max_profit_target=float(os.getenv('MAX_PROFIT_TARGET', '1.')),
+            trailing_stop_percentage=float(os.getenv('TRAILING_STOP_PERCENTAGE', '0.')),
+            higher_trailing_stop=float(os.getenv('HIGHER_TRAILING_STOP', '0.')),
+            max_trailing_stop=float(os.getenv('MAX_TRAILING_STOP', '0.'))
         ),
         'symbol': SymbolConfig(
             live_symbol=os.getenv('LIVE_SYMBOL', 'NIFTY'),
