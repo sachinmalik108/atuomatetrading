@@ -1,33 +1,40 @@
 from logzero import logger
 from SmartApi.smartConnect import SmartConnect
 import requests 
+import tkinter as tk
 import pyotp
 import pandas as pd
 from datetime import datetime
 import math
+import time
 api_key = 'uQBIgMGv'
 username = 'S692948'
 pwd = '5472'
 # SENSEX25FEB25205PE
 # search file
 # tradingsymbol = 'SENSEX25FEB74600PE'
-# tradingsymbol = 'SENSEX25FEB74500CE'
+# tradingsymbol = 'SENSEX2530472900CE'
 multiple = 50
-tradingsymbol = "Nifty 50"
-symboltoken = "99926000"
-Quantity = '140'
+tradingsymbollive = "Nifty 50"
+symboltokenlive = "99926000"
+# tradingsymbollive = "SENSEX"
+# symboltokenlive = "99919000"
+Quantity = ''
 exchlive = "NSE"
 livesymbol = ''
 livetoken = ''
 trigerprice = 0  
-time3pm = '15:00:00'
-time305 =  '15:05:00'
-time310 =  '15:10:00'
-time315 =  '15:15:00'
+time3pm = '01:55:00'
+time305 =  '13:05:00'
+time310 =  '12:15:00'
+time315 =  '12:40:00'
+timempm = '01:50:00'
+timep5 =  '01:10:00'
+timeo0 =  '01:20:00'
+timeq =  '12:20:00'
 #  NFO     BFO
 
-exch = ""   
-smartApi = SmartConnect(api_key)
+exch = "BFO"   
 orderid = ''
 buyvalue = ''
 lastmodified = ''
@@ -41,36 +48,15 @@ tokendf = pd.DataFrame.from_dict(d)
 tokendf['expiry'] = pd.to_datetime(tokendf['expiry'])
 tokendf = tokendf.astype({'strike': float})
 # Filter for specific trading symbol
-
 response.close()
 
-try:
-    token = "CESGV6Z4HHXCIZHQPL3CUFK6ZU"
-    totp = pyotp.TOTP(token).now()
-except Exception as e:
-    logger.error("Invalid Token: The provided token is not valid.")
-    raise e
 
-correlation_id = "abcde"
-data = smartApi.generateSession(username, pwd, totp)
-if data['status'] == False:
-    logger.error(data)
-else:
-    # logger.info(f"data: {data}")
-    authToken = data['data']['jwtToken']
-    refreshToken = data['data']['refreshToken']
-    feedToken = smartApi.getfeedToken()
-    # logger.info(f"Feed-Token :{feedToken}")
-    res = smartApi.getProfile(refreshToken)
-    # logger.info(f"Get Profile: {res}")
-    smartApi.generateToken(refreshToken)
-    res=res['data']['exchanges']
 
-    now = datetime.now().today().weekday()
-    if(now == 1):
-       exch = "BFO"
-    if(now == 3):
-       exch = "NFO"
+    # now = datetime.now().today().weekday()
+    # if(now == 1):
+    #    exch = "BFO"
+    # if(now == 3):
+    #    exch = "NFO"
        
 
 # Check if 'tradingsymbol' exists
@@ -78,22 +64,49 @@ else:
     
     
 
-    cash = smartApi.rmsLimit()
-    cash = cash['data']
-    cash = cash['availablecash']
-    cash = float(cash)
-    margin = 0.1*cash
+    
+
+
+while(True):
+
     while(True):
        
       now = datetime.now()
+      trigerprice = 0
       formatted_now = now.strftime("%H:%M:%S")
       # Method 1: Place an order and return the order ID
-      if(formatted_now > time3pm):
-        print(datetime.now())
-        livedata=smartApi.ltpData(exchlive, tradingsymbol, symboltoken)
-         
+      if(formatted_now >= time3pm or formatted_now == time310 or formatted_now == time305):
+        
+      
+        token = "CESGV6Z4HHXCIZHQPL3CUFK6ZU"
+        totp = pyotp.TOTP(token).now()
+  
 
-        livedata = livedata['data']   
+        correlation_id = "abcde"
+        smartApi = SmartConnect(api_key)
+        data = smartApi.generateSession(username, pwd, totp)
+        if data['status'] == False:
+          logger.error(data)
+        else:
+    # logger.info(f"data: {data}")
+         authToken = data['data']['jwtToken']
+         refreshToken = data['data']['refreshToken']
+         feedToken = smartApi.getfeedToken()
+    # logger.info(f"Feed-Token :{feedToken}")
+         res = smartApi.getProfile(refreshToken)
+    # logger.info(f"Get Profile: {res}")
+         smartApi.generateToken(refreshToken)
+         res=res['data']['exchanges']
+        #  cash = smartApi.rmsLimit()
+        #  cash = cash['data']
+        #  cash = cash['availablecash']
+        #  cash = float(cash)
+        #  margin = 0.1*cash
+
+        print(exchlive)
+        livedata=smartApi.ltpData(exchlive, tradingsymbollive, symboltokenlive)
+        livedata=smartApi.ltpData(exchlive, tradingsymbollive, symboltokenlive)
+        livedata = livedata['data']    
         livedata = livedata['ltp']
         livedata = round(livedata/multiple)*multiple
         print(int(livedata))
@@ -113,15 +126,19 @@ else:
         if(month == "05"):
           month = "MAY"  
         
-        scriptcesymbol = 'NIFTY' + "27" + month + year+ livedata  + 'CE'
-        scriptpesymbol = 'NIFTY' + "27" + month + year + livedata  + 'PE'
-        print(scriptpesymbol)
+        scriptcesymbol = 'NIFTY' + "6" + "MAR" + year+ livedata  + 'CE'
+        scriptpesymbol = 'NIFTY' + "6" + "MAR" + year + livedata  + 'PE'
+
+        # scriptcesymbol = 'SENSEX' + "25304" + livedata  + 'CE'
+        # scriptpesymbol = 'SENSEX' + "25304"  + livedata  + 'PE'
+        
+        
         result = tokendf[tokendf['symbol'] == scriptcesymbol]
         tokence = result['token'].values[0]
         lotsize = result['lotsize'].values[0]
         lotsize = int(lotsize)
     # Display result
-        print(scriptpesymbol)
+        # print(scriptpesymbol)
         result = tokendf[tokendf['symbol'] == scriptpesymbol]
         tokenpe = result['token'].values[0]
         lotsize = result['lotsize'].values[0]
@@ -136,7 +153,7 @@ else:
          tradingsymbol = scriptpesymbol
         else:
          tradingsymbol =   scriptcesymbol
-
+        print(tradingsymbol)
         result = tokendf[tokendf['symbol'] == tradingsymbol]
         symboltoken = result['token'].values[0]
         ltp_data=smartApi.ltpData(exch, tradingsymbol, symboltoken)
@@ -152,7 +169,7 @@ else:
         #     i = i+1
         #    else:
         #       break
-        Quantity = lotsize
+        Quantity = str(lotsize)
         # placing buy order
         orderparams = {
             "variety": "NORMAL",
@@ -168,17 +185,19 @@ else:
         "stoploss": "0",
         "quantity": Quantity
         }
-        orderid = smartApi.placeOrder(orderparams)
+        
+        # orderid = smartApi.placeOrder(orderparams)
+        
         print('buy order ')
         print(datetime.now())
+        ltp_data=smartApi.ltpData(exch, tradingsymbol, symboltoken)
+        ltp_value = ltp_data['data']['ltp']
+        print(ltp_value)
         break
        # Method 2: Place an order and return the full response
 
-
-
-
     while(True):
-        # print('here also for sell')
+        time.sleep(0.2)
         ltp_data=smartApi.ltpData(exch, tradingsymbol, symboltoken)
         ltp_value = ltp_data['data']['ltp'] 
         sellvalue = 1.15*(float(buyvalue))
@@ -186,18 +205,15 @@ else:
         # print(ltp_value)
         # print(sellvalue)
         if(float(ltp_value) >sellvalue):
-            print('1.20 times buy price')
-            print(sellvalue)
-            print(ltp_value)
-            
+           
             newselltrigerprice =  math.ceil(0.88*(float(ltp_value)) * 10) / 10
             if(float(ltp_value) >highersell):
               newselltrigerprice =  math.ceil(0.85*(float(ltp_value)) * 10) / 10
             if(newselltrigerprice>= trigerprice):
                trigerprice = newselltrigerprice
-
+               
              # stoploss at 65% loss
-        if(float(ltp_value) < 0.35*float(buyvalue)):
+        if(float(ltp_value) < 0.40*float(buyvalue)):
             orderparams = {
                 "variety": "NORMAL",
               "tradingsymbol": tradingsymbol,
@@ -211,8 +227,14 @@ else:
                 "squareoff": "0",
               "quantity": Quantity
                 }
+            # print(datetime.now())
+            # orderid = smartApi.placeOrder(orderparams)
             
-            orderid = smartApi.placeOrder(orderparams)
+            ltp_data=smartApi.ltpData(exch, tradingsymbol, symboltoken)
+            ltp_value = ltp_data['data']['ltp'] 
+            print('sell value')
+            print(ltp_value)
+            
             break
     
         if(float(ltp_value)<trigerprice):
@@ -229,12 +251,25 @@ else:
                 "squareoff": "0",
               "quantity": Quantity
                 }
-           print('sell at 2.15')
-           orderid = smartApi.placeOrder(orderparams)
+        #    orderid = smartApi.placeOrder(orderparams)
+           ltp_data=smartApi.ltpData(exch, tradingsymbol, symboltoken)
+           ltp_value = ltp_data['data']['ltp'] 
+           print('sell value')
+           print(ltp_value)
            break
     
     
-    
+
+
+
+
+
+
+
+
+
+
+       
     
     
     
