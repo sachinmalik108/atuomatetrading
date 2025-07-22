@@ -454,10 +454,10 @@ def main():
     """Main function"""
     # Load configuration from environment variables or config file
     config = TradingConfig(
-        api_key = 'uQBIgMGv',
-        username = 'S692948',
-        pwd = '5472',
-        totp_token=os.getenv('TOTP_TOKEN', 'CESGV6Z4HHXCIZHQPL3CUFK6ZU')
+        api_key = '',
+        username = '',
+        pwd = '',
+        totp_token=os.getenv('TOTP_TOKEN', '')
     )
     
     symbol_config = SymbolConfig(
