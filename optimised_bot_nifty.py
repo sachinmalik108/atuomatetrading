@@ -34,13 +34,13 @@ class TradingConfig:
     margin_limit: float = 7500
     quantity_limit: int = 1000
     price_multiple: float = 1.0
-    stop_loss_percentage: float = 0.6
-    profit_target_percentage: float = 1.1
-    higher_profit_target: float = 1.2
-    max_profit_target: float = 1.3
-    trailing_stop_percentage: float = 0.93
-    higher_trailing_stop: float = 0.87
-    max_trailing_stop: float = 0.85
+    stop_loss_percentage: float = 0.93
+    profit_target_percentage: float = 1.03
+    higher_profit_target: float = 1.05
+    max_profit_target: float = 1.1
+    trailing_stop_percentage: float = 0.98
+    higher_trailing_stop: float = 0.965
+    max_trailing_stop: float = 0.95
 
 @dataclass
 class SymbolConfig:
@@ -63,18 +63,18 @@ class TimeManager:
         """Create list of trading times"""
         times = []
         # Morning session
-        for hour in range(1, 24):
+        for hour in range(9, 17):
             for minute in range(0, 60, 5):
                 if hour == 9 and minute < 50:
                     continue
                 times.append(f"{hour:02d}:{minute:02d}:00")
         
         # Afternoon session
-        # for hour in range(12, 24):
-        #     for minute in range(0, 60, 1):
-        #         if hour == 14 and minute < 20:
-        #             break
-        #         times.append(f"{hour:02d}:{minute:02d}:00")
+        for hour in range(11, 13):
+            for minute in range(0, 60, 5):
+                if hour == 14 and minute > 20:
+                    break
+                times.append(f"{hour:02d}:{minute:02d}:00")
         
         return times
     
@@ -195,11 +195,12 @@ class TradingBot:
     
     def create_option_symbols(self, strike_price: float) -> Tuple[str, str]:
         """Create CE and PE option symbols"""
-        strike_price = livedata = round(strike_price/100)*100
-        ce_symbol = f"{self.symbol_config.base_symbol}{self.symbol_config.expiry_code}{self.symbol_config.strike_code}{int(strike_price)}CE"
-        pe_symbol = f"{self.symbol_config.base_symbol}{self.symbol_config.expiry_code}{self.symbol_config.strike_code}{int(strike_price)}PE"
+        strike_price = livedata = round(strike_price/50)*50
+        # ce_symbol = f"{self.symbol_config.base_symbol}{self.symbol_config.expiry_code}{self.symbol_config.strike_code}{int(strike_price)}CE"
+        # pe_symbol = f"{self.symbol_config.base_symbol}{self.symbol_config.expiry_code}{self.symbol_config.strike_code}{int(strike_price)}PE"
 
-       
+        ce_symbol = f"NIFTY24JUL25{int(strike_price)}CE"
+        pe_symbol = f"NIFTY24JUL25{int(strike_price)}PE"
         
         return ce_symbol, pe_symbol
     
@@ -462,12 +463,12 @@ def main():
     
     symbol_config = SymbolConfig(
         live_symbol="SENSEX",
-        live_token="99919000",
-        live_exchange="BSE",
-        options_exchange="BFO",
-        base_symbol="SENSEX",
-        expiry_code="25JUL",
-        strike_code=""
+        live_token="99926000",
+        live_exchange="NSE",
+        options_exchange="NFO",
+        base_symbol="Nifty 50",
+        expiry_code="257",
+        strike_code="22"
     )
     
     # Create and run trading bot
