@@ -7,9 +7,9 @@ import pandas as pd
 from datetime import datetime
 import math
 import time
-api_key = 'uQBIgMGv'
-username = 'S692948'
-pwd = '5472'
+api_key = ''
+username = ''
+pwd = ''
 # SENSEX25FEB25205PE
 # search file
 multiple = 50
@@ -66,7 +66,7 @@ tokendf = tokendf.astype({'strike': float})
 response.close()
 
 try:
-    token = "CESGV6Z4HHXCIZHQPL3CUFK6ZU"
+    token = ""
     totp = pyotp.TOTP(token).now()
 except Exception as e:
     logger.error("Invalid Token: The provided token is not valid.")
@@ -233,15 +233,15 @@ while(True):
         time.sleep(0.35)
         ltp_data=smartApi.ltpData(exch, tradingsymbol, symboltoken)
         ltp_value = ltp_data['data']['ltp'] 
-        sellvalue = 1.06*(float(buyvalue))
-        highersell = 1.25*(float(buyvalue))
+        sellvalue = 1*(float(buyvalue))
+        highersell = 1*(float(buyvalue))
         # print(ltp_value)
         # print(sellvalue)
         if(float(ltp_value) >sellvalue):
            
-            newselltrigerprice =  math.ceil(0.95*(float(ltp_value)) * 10) / 10
+            newselltrigerprice =  math.ceil(*(float(ltp_value)) * 10) / 10
             if(float(ltp_value) >highersell):
-              newselltrigerprice =  math.ceil(0.93*(float(ltp_value)) * 10) / 10
+              newselltrigerprice =  math.ceil(*(float(ltp_value)) * 10) / 10
             if(newselltrigerprice>= trigerprice):
                trigerprice = newselltrigerprice
                
