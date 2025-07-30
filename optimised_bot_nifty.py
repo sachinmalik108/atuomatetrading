@@ -179,7 +179,7 @@ class TradingBot:
                 return None
         except Exception as e:
             logger.error(f"Error getting LTP for {symbol}: {e}")
-            telegramalert.send_telegram_alert(f"Error getting LTP for {symbol}: {e}")
+            # telegramalert.send_telegram_alert(f"Error getting LTP for {symbol}: {e}")
             return None
     
     def get_live_price(self) -> Optional[float]:
@@ -291,7 +291,7 @@ class TradingBot:
                 'trigger_price': 0
             }
             logger.info(f"Buy order placed: {symbol} at {ltp}, Qty: {quantity}")
-            telegramalert.send_telegram_alert(f"Buy order placed: {symbol} at {ltp}, Qty: {quantity}")
+            # telegramalert.send_telegram_alert(f"Buy order placed: {symbol} at {ltp}, Qty: {quantity}")
             return True
         return False
     
@@ -314,7 +314,7 @@ class TradingBot:
         order_id = self.place_order(order_params)
         if order_id:
             logger.info(f"Sell order placed: {symbol} at {ltp}, Qty: {quantity}")
-            telegramalert.send_telegram_alert(f"Sell order placed: {symbol} at {ltp}, Qty: {quantity}")
+            # telegramalert.send_telegram_alert(f"Sell order placed: {symbol} at {ltp}, Qty: {quantity}")
             self.current_position = None
             return True
         return False
