@@ -2602,3 +2602,75 @@
 2025-07-30 01:46:03,981 - ERROR - Error getting LTP for SENSEX25JUL81300PE: 'NoneType' object is not subscriptable
 2025-07-30 01:46:03,983 - WARNING - Could not get LTP for monitoring
 2025-07-30 01:46:05,259 - INFO - Trading bot stopped by user
+2025-07-30 02:18:45,303 - INFO - Loaded 128528 token records
+2025-07-30 02:18:48,323 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4MjIxMjYsImV4cCI6MTc1MzkwODUyNn0.E4G-X30WQZ98muqvRblTdJ9hYXsMFcVGeDWN0JYmAPsUgauR2gf_aF58VJpMrt-PF1wN_PKTpE8b6uZ9vjJ5pg
+2025-07-30 02:18:49,181 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 02:18:49,860 - INFO - API initialization completed successfully
+2025-07-30 02:18:49,861 - INFO - Starting trading bot...
+2025-07-30 02:19:22,459 - INFO - Trading bot stopped by user
+2025-07-30 02:19:37,561 - INFO - Loaded 128528 token records
+2025-07-30 02:19:39,882 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4MjIxNzgsImV4cCI6MTc1MzkwODU3OH0.TxMlA__aBFlwolzk4JVvBnxzWaEaZexeBXtObaRsh8pkCyIv-RFqXhRxBFtaiBoiYuFniHVJSLspuu8PP1ZwjA
+2025-07-30 02:19:40,615 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 02:19:41,299 - INFO - API initialization completed successfully
+2025-07-30 02:19:41,299 - INFO - Starting trading bot...
+2025-07-30 02:20:00,004 - INFO - Trading time: 02:20:00
+2025-07-30 02:20:01,843 - ERROR - Error in trading cycle: Could not get symbol information
+2025-07-30 02:20:28,077 - INFO - Trading bot stopped by user
+2025-07-30 02:20:43,900 - INFO - Loaded 128528 token records
+2025-07-30 02:20:47,822 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4MjIyNDYsImV4cCI6MTc1MzkwODY0Nn0.vU67uE4AO1gY6rSXZMwbONuMYaDv5cwzQj3FwbcBlN5vvIKk7T3iD0EqqxLIC-BeYvGa76urbKimu9UEoXRIwg
+2025-07-30 02:21:04,107 - INFO - Loaded 128528 token records
+2025-07-30 02:21:06,196 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4MjIyNjUsImV4cCI6MTc1MzkwODY2NX0.upEc4CIrD0vcBzfo36sFprtrxqjCJ5mSxO27qXbJczQxFEagB73zA3QwU0vZkgrMznPb51GaG3v2huV1lGwGJQ
+2025-07-30 02:21:06,871 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 02:21:07,538 - INFO - API initialization completed successfully
+2025-07-30 02:21:07,539 - INFO - Starting trading bot...
+2025-07-30 02:22:13,344 - INFO - Trading bot stopped by user
+2025-07-30 02:22:24,873 - INFO - Loaded 128528 token records
+2025-07-30 02:22:26,673 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4MjIzNDUsImV4cCI6MTc1MzkwODc0NX0.zndUkylZiFO0rFgPdCkfxiKLfgFT5wnH_gLszJi28F5hOlpPcCKhBqoylBv6Lto4Wi72sEddyuwBu4ag4_oE1Q
+2025-07-30 02:22:27,327 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 02:22:27,973 - INFO - API initialization completed successfully
+2025-07-30 02:22:27,974 - INFO - Starting trading bot...
+2025-07-30 02:23:00,001 - INFO - Trading time: 02:23:00
+2025-07-30 02:23:00,862 - ERROR - Error in trading cycle: Could not get symbol information
+2025-07-30 02:23:00,963 - INFO - Trading time: 02:23:00
+2025-07-30 02:23:01,721 - ERROR - Error in trading cycle: Could not get symbol information
+2025-07-30 02:23:30,234 - INFO - Trading bot stopped by user
+2025-07-30 05:35:41,618 - INFO - Loaded 128528 token records
+2025-07-30 05:35:44,839 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4MzM5NDIsImV4cCI6MTc1MzkyMDM0Mn0.ilmyU1TSHn4Uou4mvoLTTiF2O2-JbZcdXrsuz5iE5L8LMtl0iY1-MpsRWw8TzkxIRtqiph4yq-geGk2-Mne1Bg
+2025-07-30 05:35:46,214 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 05:35:47,100 - INFO - API initialization completed successfully
+2025-07-30 05:35:47,101 - INFO - Starting trading bot...
+2025-07-30 05:40:10,864 - INFO - Trading bot stopped by user
+2025-07-30 05:40:28,128 - INFO - Loaded 128528 token records
+2025-07-30 05:40:29,929 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4MzQyMjcsImV4cCI6MTc1MzkyMDYyN30.a_Ay2Ju3bgHE9tuPEDUfRaoF5ZwMiLCytsCvfVpUp7Yq0l53PEVJo6kQxxwQXCVxNGi16EckWeGzS_qpgpZ8ng
+2025-07-30 05:40:30,579 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 05:40:31,202 - INFO - API initialization completed successfully
+2025-07-30 05:40:31,202 - INFO - Starting trading bot...
+2025-07-30 05:41:00,053 - INFO - Trading time: 05:41:00
+2025-07-30 05:41:00,823 - ERROR - Error in trading cycle: Could not get symbol information
+2025-07-30 05:41:00,925 - INFO - Trading time: 05:41:00
+2025-07-30 05:41:01,688 - ERROR - Error in trading cycle: Could not get symbol information
+2025-07-30 05:42:00,076 - INFO - Trading time: 05:42:00
+2025-07-30 05:42:01,836 - ERROR - Error in trading cycle: Could not get symbol information
+2025-07-30 05:42:30,875 - INFO - Trading bot stopped by user
+2025-07-30 05:42:46,912 - INFO - Loaded 128528 token records
+2025-07-30 05:42:49,790 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4MzQzNjcsImV4cCI6MTc1MzkyMDc2N30.Uq6tquA8SXBIBd24jVccmwfVxBxHb2qJFXEyL9-8B4TfMnsXqN6N6xLP8riEY7BXtGF76Cww_H0QJQ2BVHNJxA
+2025-07-30 05:42:50,453 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 05:42:51,082 - INFO - API initialization completed successfully
+2025-07-30 05:42:51,083 - INFO - Starting trading bot...
+2025-07-30 05:43:00,043 - INFO - Trading time: 05:43:00
+2025-07-30 05:43:04,844 - INFO - Order placed successfully: 0730e619e925AO
+2025-07-30 05:43:04,845 - INFO - Buy order placed: NIFTY31JUL2524800PE at 55.85, Qty: 75
+2025-07-30 05:43:06,392 - INFO - Starting position monitoring...
+2025-07-30 05:43:28,674 - INFO - Trading bot stopped by user
+2025-07-30 05:47:03,631 - INFO - Loaded 128528 token records
+2025-07-30 05:47:06,187 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4MzQ2MjQsImV4cCI6MTc1MzkyMTAyNH0.Gwsm7PEEb66gfWD9BJU13H2cCxiQFRT69xQr-rXZTJ54wa_-mm8JMDKzWwOltoboULRoS1fFIJ28JTg-_7DEPw
+2025-07-30 05:47:07,100 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 05:47:07,990 - INFO - API initialization completed successfully
+2025-07-30 05:47:07,990 - INFO - Starting trading bot...
+2025-07-30 05:47:17,903 - INFO - Loaded 128528 token records
+2025-07-30 05:47:19,975 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4MzQ2MzcsImV4cCI6MTc1MzkyMTAzN30.ZrsxTn3vfJ3EtviqIaJA9T4-J1bcuUiuyoXIsOr8e4Ocv54XwIVjpdnHbvIdaYaleHWA7C8aqMtzxmuHZhcfCw
+2025-07-30 05:47:20,691 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 05:47:21,463 - INFO - API initialization completed successfully
+2025-07-30 05:47:21,464 - INFO - Starting trading bot...
+2025-07-30 05:59:13,717 - INFO - Trading bot stopped by user
+2025-07-30 05:59:17,686 - INFO - Trading bot stopped by user
