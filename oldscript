@@ -64,14 +64,14 @@ class TimeManager:
         """Create list of trading times"""
         times = []
         # Morning session
-        for hour in range(9, 13):
-            for minute in range(0, 60, 5):
+        for hour in range(9, 14):
+            for minute in range(0, 60, 10):
                 if hour == 9 and minute < 50:
                     continue
                 times.append(f"{hour:02d}:{minute:02d}:00")
         
         # Afternoon session
-        for hour in range(9, 13):
+        for hour in range(9, 14):
             for minute in range(0, 60, 10):
                 if hour == 14 and minute > 20:
                     break
@@ -169,6 +169,7 @@ class TradingBot:
     def get_ltp_data(self, exchange: str, symbol: str, token: str) -> Optional[float]:
         """Get LTP data with error handling"""
         try:
+            time_module.sleep(0.2)
             if self.smart_api is None:
                 return None
             ltp_data = self.smart_api.ltpData(exchange, symbol, token)

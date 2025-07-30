@@ -63,18 +63,18 @@ class TimeManager:
         """Create list of trading times"""
         times = []
         # Morning session
-        for hour in range(1, 24):
+        for hour in range(9, 12):
             for minute in range(0, 60, 5):
-                if hour == 9 and minute < 50:
+                if hour == 9 and minute <= 50:
                     continue
                 times.append(f"{hour:02d}:{minute:02d}:00")
         
         # Afternoon session
-        # for hour in range(12, 24):
-        #     for minute in range(0, 60, 1):
-        #         if hour == 14 and minute < 20:
-        #             break
-        #         times.append(f"{hour:02d}:{minute:02d}:00")
+        for hour in range(12, 14):
+            for minute in range(0, 60, 1):
+                if hour == 14 and minute < 20:
+                    break
+                times.append(f"{hour:02d}:{minute:02d}:00")
         
         return times
     
@@ -180,6 +180,15 @@ class TradingBot:
             logger.error(f"Error getting LTP for {symbol}: {e}")
             return None
     
+    
+    def get_ltp_data_with_retry(self, exchange: str, symbol: str, token: str, retries: int = 3) -> Optional[float]:
+        """Get LTP data with retry mechanism"""
+        for _ in range(retries):
+            ltp = self.get_ltp_data(exchange, symbol, token)
+            if ltp is not None:
+                return ltp
+            time_module.sleep(1)
+        return None
     def get_live_price(self) -> Optional[float]:
         """Get live price for the underlying"""
         ltp = self.get_ltp_data(
