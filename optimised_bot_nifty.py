@@ -1,5 +1,6 @@
 import os
 import logging
+from smtplib import LMTP
 from typing import Dict, List, Optional, Tuple
 from dataclasses import dataclass
 from datetime import datetime, time
@@ -35,13 +36,13 @@ class TradingConfig:
     margin_limit: float = 7500
     quantity_limit: int = 1000
     price_multiple: float = 1.0
-    stop_loss_percentage: float = 0.93
-    profit_target_percentage: float = 1.03
-    higher_profit_target: float = 1.05
-    max_profit_target: float = 1.1
-    trailing_stop_percentage: float = 0.98
-    higher_trailing_stop: float = 0.965
-    max_trailing_stop: float = 0.95
+    stop_loss_percentage: float = 0.75
+    profit_target_percentage: float = 1.06
+    higher_profit_target: float = 1.1
+    max_profit_target: float = 1.2
+    trailing_stop_percentage: float = 0.95
+    higher_trailing_stop: float = 0.93
+    max_trailing_stop: float = 0.92
 
 @dataclass
 class SymbolConfig:
@@ -64,16 +65,16 @@ class TimeManager:
         """Create list of trading times"""
         times = []
         # Morning session
-        for hour in range(9, 13):
-            for minute in range(0, 60, 5):
+        for hour in range(9, 11):
+            for minute in range(0, 60, 10):
                 if hour == 9 and minute < 50:
                     continue
                 times.append(f"{hour:02d}:{minute:02d}:00")
         
         # Afternoon session
-        for hour in range(9, 13):
-            for minute in range(0, 60, 5):
-                if hour == 14 and minute > 20:
+        for hour in range(11, 13):
+            for minute in range(0, 60, 10):
+                if hour == 13 and minute > 10:
                     break
                 times.append(f"{hour:02d}:{minute:02d}:00")
         
@@ -179,7 +180,7 @@ class TradingBot:
                 return None
         except Exception as e:
             logger.error(f"Error getting LTP for {symbol}: {e}")
-            # telegramalert.send_telegram_alert(f"Error getting LTP for {symbol}: {e}")
+            telegramalert.send_telegram_alert(f"Error getting LTP for {symbol}: {e}")
             return None
     
     def get_live_price(self) -> Optional[float]:
@@ -291,7 +292,15 @@ class TradingBot:
                 'trigger_price': 0
             }
             logger.info(f"Buy order placed: {symbol} at {ltp}, Qty: {quantity}")
-            # telegramalert.send_telegram_alert(f"Buy order placed: {symbol} at {ltp}, Qty: {quantity}")
+            message = (
+    f"📥 Buy Order Placed\n\n"
+    f"📌 Symbol: {symbol}\n"
+    f"💰 Price: {ltp}\n"
+    f"📦 StopLoss: {math.ceil(self.config.stop_loss_percentage*ltp*10)/10}\n"
+)
+
+
+            telegramalert.send_telegram_alert(message)
             return True
         return False
     
@@ -313,8 +322,12 @@ class TradingBot:
         
         order_id = self.place_order(order_params)
         if order_id:
-            logger.info(f"Sell order placed: {symbol} at {ltp}, Qty: {quantity}")
-            # telegramalert.send_telegram_alert(f"Sell order placed: {symbol} at {ltp}, Qty: {quantity}")
+            logger.info(f"Sell order placed: {symbol} at {ltp}")
+            message = (
+    f"📥 Sell Order Placed\n\n"
+    f"📌 Symbol: {symbol}\n"
+    f"💰 Price: {ltp}\n")
+            telegramalert.send_telegram_alert(message)
             self.current_position = None
             return True
         return False

@@ -5716,3 +5716,120 @@
 2025-07-30 12:59:37,653 - INFO - Sell order placed: NIFTY31JUL2524850PE at 51.55, Qty: 150
 2025-07-30 12:59:37,653 - INFO - Position closed due to trailing_stop
 2025-07-30 13:19:24,077 - INFO - Trading bot stopped by user
+2025-07-30 13:28:19,430 - INFO - Loaded 127195 token records
+2025-07-30 13:28:23,700 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4NjIzMDIsImV4cCI6MTc1Mzk0ODcwMn0.zR5udQ0nEgohvhrnHWDdBbJJHnxTFm5dYcaUjUf8JQsdmjfzCUCFLZy3CRDKub4rjaCZm9f4Kl_-WEbK9CHeiw
+2025-07-30 13:28:24,727 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 13:28:25,765 - INFO - API initialization completed successfully
+2025-07-30 13:28:25,766 - INFO - Starting trading bot...
+2025-07-30 13:30:00,049 - INFO - Trading time: 13:30:00
+2025-07-30 13:30:05,915 - INFO - Order placed successfully: 250730000678158
+2025-07-30 13:30:05,916 - INFO - Buy order placed: NIFTY31JUL2524850CE at 57.95, Qty: 75
+2025-07-30 13:30:05,917 - INFO - Starting position monitoring...
+2025-07-30 13:32:03,524 - INFO - Updated trigger price to: 57.3
+2025-07-30 13:32:04,587 - INFO - Updated trigger price to: 57.9
+2025-07-30 13:32:05,665 - INFO - Updated trigger price to: 58.3
+2025-07-30 13:32:07,733 - INFO - Updated trigger price to: 59.0
+2025-07-30 13:32:09,849 - INFO - Updated trigger price to: 59.4
+2025-07-30 13:32:10,909 - INFO - Updated trigger price to: 59.9
+2025-07-30 13:32:11,896 - INFO - Updated trigger price to: 61.5
+2025-07-30 13:32:12,924 - INFO - Updated trigger price to: 61.9
+2025-07-30 13:32:13,921 - INFO - Updated trigger price to: 62.4
+2025-07-30 13:32:15,003 - INFO - Updated trigger price to: 62.5
+2025-07-30 13:32:23,265 - INFO - Updated trigger price to: 62.8
+2025-07-30 13:32:24,384 - INFO - Updated trigger price to: 63.1
+2025-07-30 13:32:26,396 - INFO - Updated trigger price to: 63.4
+2025-07-30 13:32:27,482 - INFO - Updated trigger price to: 63.5
+2025-07-30 13:32:28,482 - INFO - Updated trigger price to: 63.6
+2025-07-30 13:32:29,543 - INFO - Updated trigger price to: 63.8
+2025-07-30 13:33:00,140 - INFO - Updated trigger price to: 63.9
+2025-07-30 13:33:03,391 - INFO - Updated trigger price to: 64.6
+2025-07-30 13:33:14,000 - INFO - Updated trigger price to: 65.3
+2025-07-30 13:33:15,001 - INFO - Updated trigger price to: 65.5
+2025-07-30 13:33:25,178 - INFO - Updated trigger price to: 66.5
+2025-07-30 13:33:26,200 - INFO - Updated trigger price to: 66.8
+2025-07-30 13:33:54,770 - INFO - Updated trigger price to: 67.0
+2025-07-30 13:33:55,802 - INFO - Updated trigger price to: 67.8
+2025-07-30 13:34:03,983 - INFO - Updated trigger price to: 68.1
+2025-07-30 13:35:20,978 - INFO - Order placed successfully: 250730000689463
+2025-07-30 13:35:20,978 - INFO - Sell order placed: NIFTY31JUL2524850CE at 67.8, Qty: 75
+2025-07-30 13:35:20,979 - INFO - Position closed due to trailing_stop
+2025-07-30 13:40:00,014 - INFO - Trading time: 13:40:00
+2025-07-30 13:40:07,549 - INFO - Order placed successfully: 250730000698361
+2025-07-30 13:40:07,551 - INFO - Buy order placed: NIFTY31JUL2524850PE at 54.05, Qty: 75
+2025-07-30 13:40:07,552 - INFO - Starting position monitoring...
+2025-07-30 13:45:45,438 - INFO - Order placed successfully: 250730000706082
+2025-07-30 13:45:45,458 - INFO - Sell order placed: NIFTY31JUL2524850PE at 47.65, Qty: 75
+2025-07-30 13:45:45,459 - INFO - Position closed due to stop_loss
+2025-07-30 20:15:26,932 - INFO - Loaded 127195 token records
+2025-07-30 20:15:30,687 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4ODY3MjcsImV4cCI6MTc1Mzk3MzEyN30.Q_w-baSle0Jb96GSxW_P6ymfynpC-_4mrcbJPkgVB_3B1xA3s67zsjVq8oF6dVGmXFEsF2R77KWmSr0yKbk4iw
+2025-07-30 20:15:31,412 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 20:15:32,333 - INFO - API initialization completed successfully
+2025-07-30 20:15:32,334 - INFO - Starting trading bot...
+2025-07-30 20:16:00,005 - INFO - Trading time: 20:16:00
+2025-07-30 20:16:06,376 - INFO - Order placed successfully: 07302958fbdaAO
+2025-07-30 20:16:06,377 - INFO - Buy order placed: NIFTY31JUL2524850PE at 53.45, Qty: 75
+2025-07-30 20:16:07,659 - INFO - Starting position monitoring...
+2025-07-30 20:16:26,376 - INFO - Trading bot stopped by user
+2025-07-30 20:19:18,747 - INFO - Loaded 127195 token records
+2025-07-30 20:19:20,761 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4ODY5NTgsImV4cCI6MTc1Mzk3MzM1OH0.C4Nr7_KmoK_rrbqkFthNUA6BrtDCP_N7BZ4W8C5dIyd8yagxXC6hi8xY0ESYRiKtVwWH4ey4T7fAWcvbz-wktg
+2025-07-30 20:19:21,433 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 20:19:22,103 - INFO - API initialization completed successfully
+2025-07-30 20:19:22,103 - INFO - Starting trading bot...
+2025-07-30 20:20:00,070 - INFO - Trading time: 20:20:00
+2025-07-30 20:20:03,689 - INFO - Order placed successfully: 07302d2299c0AO
+2025-07-30 20:20:03,690 - INFO - Buy order placed: NIFTY31JUL2524850PE at 53.45, Qty: 75
+2025-07-30 20:20:04,963 - INFO - Starting position monitoring...
+2025-07-30 20:23:22,195 - INFO - Trading bot stopped by user
+2025-07-30 20:24:07,406 - INFO - Loaded 127195 token records
+2025-07-30 20:24:29,633 - INFO - Loaded 127195 token records
+2025-07-30 20:24:33,261 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4ODcyNzEsImV4cCI6MTc1Mzk3MzY3MX0.JLP8yej4yJMrcWojeNkOxHTuHblG5mZDb3_dHF_purRqNQcmcoGvypZlxUUPpZ7xaycBlro_mL_6bn-exrIgFA
+2025-07-30 20:24:33,992 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 20:24:34,633 - INFO - API initialization completed successfully
+2025-07-30 20:24:34,634 - INFO - Starting trading bot...
+2025-07-30 20:25:00,023 - INFO - Trading time: 20:25:00
+2025-07-30 20:25:03,581 - INFO - Order placed successfully: 0730227e04f2AO
+2025-07-30 20:25:03,582 - INFO - Buy order placed: NIFTY31JUL2524850PE at 53.45, Qty: 75
+2025-07-30 20:25:04,884 - INFO - Starting position monitoring...
+2025-07-30 20:25:35,407 - INFO - Trading bot stopped by user
+2025-07-30 20:30:04,323 - INFO - Loaded 127195 token records
+2025-07-30 20:30:06,242 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4ODc2MDQsImV4cCI6MTc1Mzk3NDAwNH0.NOTwBQTAm0YrNoxRzxQpUya8bROVHv8H2_TGnekfAsojQna-oym2jcULhDPjKGcF9FdQrTa3s-EGO2aD2q4Nog
+2025-07-30 20:30:06,887 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 20:30:07,515 - INFO - API initialization completed successfully
+2025-07-30 20:30:07,516 - INFO - Starting trading bot...
+2025-07-30 20:31:00,016 - INFO - Trading time: 20:31:00
+2025-07-30 20:31:05,054 - INFO - Order placed successfully: 0730d1e63fe4AO
+2025-07-30 20:31:05,055 - INFO - Buy order placed: NIFTY31JUL2524850PE at 53.45, Qty: 75
+2025-07-30 20:31:06,671 - INFO - Starting position monitoring...
+2025-07-30 20:34:00,592 - INFO - Trading bot stopped by user
+2025-07-30 20:34:15,159 - INFO - Loaded 127195 token records
+2025-07-30 20:34:17,359 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4ODc4NTUsImV4cCI6MTc1Mzk3NDI1NX0.yXObT5rrUbKuAZz92lgbZ_uy7nX_y25XKVfPiuy16gHSh2e9Jw5cKM28kOJGSGxAy0GkLK_YuBoPUowxUZVJ9Q
+2025-07-30 20:34:18,058 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 20:34:18,740 - INFO - API initialization completed successfully
+2025-07-30 20:34:18,741 - INFO - Starting trading bot...
+2025-07-30 20:35:00,042 - INFO - Trading time: 20:35:00
+2025-07-30 20:35:03,745 - INFO - Order placed successfully: 0730049d70fbAO
+2025-07-30 20:35:03,746 - INFO - Buy order placed: NIFTY31JUL2524850PE at 53.45, Qty: 75
+2025-07-30 20:35:04,995 - INFO - Starting position monitoring...
+2025-07-30 20:37:06,030 - INFO - Trading bot stopped by user
+2025-07-30 22:06:57,134 - INFO - Loaded 127195 token records
+2025-07-30 22:06:59,511 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4OTM0MTcsImV4cCI6MTc1Mzk3OTgxN30.oomsFX1CSvRA9xoz1eweHchDue6rLzL5aNJSJ8S0b7lerZQpi9Pn8ssgJFqQzhukjgVmzOeAeo9vEQc_lGxdVQ
+2025-07-30 22:07:00,423 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 22:07:01,163 - INFO - API initialization completed successfully
+2025-07-30 22:07:01,164 - INFO - Starting trading bot...
+2025-07-30 22:08:22,655 - INFO - Trading bot stopped by user
+2025-07-30 22:08:38,850 - INFO - Loaded 127195 token records
+2025-07-30 22:08:41,675 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM4OTM1MTksImV4cCI6MTc1Mzk3OTkxOX0.CzQvaTROj5GFYtveVRhvC8WwsJf0N0XQKjbFXfl0izPP3t9sAgtv0RiHKsUmjRmEyv_DLgob1Kgm4VEzS9qZNw
+2025-07-30 22:08:42,621 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-30 22:08:43,313 - INFO - API initialization completed successfully
+2025-07-30 22:08:43,314 - INFO - Starting trading bot...
+2025-07-30 22:09:00,014 - INFO - Trading time: 22:09:00
+2025-07-30 22:09:03,673 - INFO - Order placed successfully: 07309772114cAO
+2025-07-30 22:09:03,674 - INFO - Buy order placed: NIFTY31JUL2524850PE at 53.45, Qty: 75
+2025-07-30 22:09:05,064 - INFO - Starting position monitoring...
+2025-07-30 22:09:26,031 - INFO - Trading bot stopped by user
+2025-07-31 07:56:36,152 - INFO - Loaded 127195 token records
+2025-07-31 07:56:39,112 - INFO - Feed-Token: eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlM2OTI5NDgiLCJpYXQiOjE3NTM5Mjg3OTYsImV4cCI6MTc1NDAxNTE5Nn0.-qEOWDI-3Zq3bc3rekvO00wvDg-9yKD7OgXg7UZd9uBE1S2SYy2kJIS724VdEoA8CKSxFNkZCM2ZVFDTtr-8Zw
+2025-07-31 07:56:40,364 - INFO - Get Profile: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': {'clientcode': 'S692948', 'name': 'SACHIN  MALIK', 'email': '', 'mobileno': '', 'exchanges': ['nse_fo', 'nse_cm', 'bse_fo', 'bse_cm'], 'products': ['MARGIN', 'MIS', 'NRML', 'CNC', 'CO', 'BO'], 'lastlogintime': '', 'broker': ''}}
+2025-07-31 07:56:41,712 - INFO - API initialization completed successfully
+2025-07-31 07:56:41,725 - INFO - Starting trading bot...
+2025-07-31 07:57:37,911 - INFO - Trading bot stopped by user
