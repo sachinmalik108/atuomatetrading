@@ -67,7 +67,7 @@ class TimeManager:
         # Morning session
         for hour in range(9, 11):
             for minute in range(0, 60, 10):
-                if hour == 9 and minute < 50:
+                if hour == 9 and minute < 20:
                     continue
                 times.append(f"{hour:02d}:{minute:02d}:00")
         
